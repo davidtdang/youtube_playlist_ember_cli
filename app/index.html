@@ -7,6 +7,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script charset="utf-8">
+    var apiKey = "AIzaSyDdecRCKzFhmcfCvLq2mttTArLIR2-aDZs";
+    var handleClientLoad = function(){
+      gapi.client.setApiKey(apiKey);
+      gapi.client.load('youtube', 'v3', function() {});
+    }
+  </script>
+  <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
     {{content-for 'head'}}
 
     <link rel="stylesheet" href="assets/vendor.css">
